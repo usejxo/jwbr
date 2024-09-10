@@ -108,3 +108,71 @@ body {
     width: 378px;
 }
 
+.result header{
+display: flex;
+border: 2px solid  #89cff0;
+justify-content: center; 
+gap: 11px;
+}
+
+.result header .title{
+
+   color: green;
+}
+
+.result p{
+text-align: center;
+padding: 0 12px;
+margin-top: 10px;
+}
+
+.result .images-container{
+
+   height: 180px;
+   display: flex;
+   justify-content: center;
+   gap: 25px;
+   align-items: center;
+
+}
+
+.result footer {
+
+   display: flex;
+
+
+}
+.result footer .score-container {
+width: 70%;
+min-height: 68px;
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+}
+
+.result footer .score-container .score-title {
+
+margin-top: 0;
+
+}
+
+.result footer .score-container .score-number {
+
+
+  
+
+}
+
+.result footer button{
+
+width: 90px;
+height: 77px;
+background-color: pink;
+border: none; 
+border-radius: 5px;
+cursor: pointer;
+
+
+}
