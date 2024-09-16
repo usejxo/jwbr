@@ -1,5 +1,4 @@
-import { Chat_key } from "./keys";
-import { photo_key } from "./keys";
+
 
 class Game {
     constructor() {
@@ -57,7 +56,7 @@ class Game {
 
 
        async fetchData(e){      
-
+               const Chat_key = "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"
                if (e) {
                    e.preventDefault();
                }
@@ -190,7 +189,7 @@ class Game {
 
 
       async fetchPhoto(word){
-
+          const photo_key =  "6zxe0trGl9838a_bTTPvvAGGJZIq5M6NZoDGgdPznWw"
           if(word.toLocaleLowerCase() === "rock"){
               let rockUrl =  "https://symbl-world.akamaized.net/i/webp/f2/0e29d778af528ff18585b3c4088835.webp"
               return rockUrl
