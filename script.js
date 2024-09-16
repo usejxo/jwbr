@@ -1,4 +1,5 @@
-require('dotenv').config();
+import { Chat_key } from "./keys";
+import { photo_key } from "./keys";
 
 class Game {
     constructor() {
@@ -56,7 +57,6 @@ class Game {
 
 
        async fetchData(e){      
-              const Chat_key = process.env.Chat_key
 
                if (e) {
                    e.preventDefault();
@@ -190,14 +190,13 @@ class Game {
 
 
       async fetchPhoto(word){
-          const key = process.env.photo_key
 
           if(word.toLocaleLowerCase() === "rock"){
               let rockUrl =  "https://symbl-world.akamaized.net/i/webp/f2/0e29d778af528ff18585b3c4088835.webp"
               return rockUrl
           }
 
-          let url = `https://api.unsplash.com/search/photos?query=${word}&page=1&per_page=10&client_id=${key}`;
+          let url = `https://api.unsplash.com/search/photos?query=${word}&page=1&per_page=10&client_id=${photo_key}`;
 
           let response = await fetch(url);
 
