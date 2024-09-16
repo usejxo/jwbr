@@ -56,7 +56,7 @@ class Game {
 
 
        async fetchData(e){      
-               const Chat_key = "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"
+               const Chat_key = "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"
                if (e) {
                    e.preventDefault();
                }
