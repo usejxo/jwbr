@@ -25,6 +25,9 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    env:
+      VITE_CHAT_KEY: ${{ secrets.VITE_CHAT_KEY }}
+      VITE_PHOTO_KEY: ${{ secrets.VITE_PHOTO_KEY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
