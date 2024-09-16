@@ -1,5 +1,3 @@
-
-
 class Game {
     constructor() {
 
@@ -56,10 +54,11 @@ class Game {
 
 
        async fetchData(e){      
-               const Chat_key = "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"
                if (e) {
                    e.preventDefault();
                }
+
+               console.log(import.meta.env.VITE_Chat_key);
 
                const InputValue =  this.elementDecisiontInput.value
 
@@ -105,7 +104,7 @@ class Game {
                            'Allow-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
                            'Allow-Control-Allow-Headers': 'Content-Type, Authorization, X-Requested-With',
                            'Content-Type': 'application/json',
-                           'Authorization': `Bearer ${Chat_key}`
+                           'Authorization': `Bearer ${import.meta.env.VITE_CHAT_KEY}`
                         },
                       body: JSON.stringify(requestBody),
                   })
@@ -189,13 +188,13 @@ class Game {
 
 
       async fetchPhoto(word){
-          const photo_key =  "6zxe0trGl9838a_bTTPvvAGGJZIq5M6NZoDGgdPznWw"
+
           if(word.toLocaleLowerCase() === "rock"){
               let rockUrl =  "https://symbl-world.akamaized.net/i/webp/f2/0e29d778af528ff18585b3c4088835.webp"
               return rockUrl
           }
 
-          let url = `https://api.unsplash.com/search/photos?query=${word}&page=1&per_page=10&client_id=${photo_key}`;
+          let url = `https://api.unsplash.com/search/photos?query=${word}&page=1&per_page=10&client_id=${import.meta.env.VITE_PHOTE_KEY}`;
 
           let response = await fetch(url);
 
