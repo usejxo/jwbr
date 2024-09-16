@@ -58,7 +58,7 @@ class Game {
                    e.preventDefault();
                }
 
-               console.log(import.meta.env.VITE_Chat_key);
+               console.log(import.meta.env.VITE_CHAT_KEY);
 
                const InputValue =  this.elementDecisiontInput.value
 
