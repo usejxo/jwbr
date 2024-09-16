@@ -1,0 +1,3 @@
+export const Chat_key = "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"
+
+export const photo_key =  "6zxe0trGl9838a_bTTPvvAGGJZIq5M6NZoDGgdPznWw"
